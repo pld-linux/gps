@@ -1,16 +1,17 @@
 Summary:	Ghost Port Scan
 Summary(pl):	Ghost Port Scan - ukrywaj±cy siê skaner portów
 Name:		gps
-Version:	0.9.2
+Version:	0.9.3
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
-Source0:	http://gps.sourceforge.net/release/%{name}-%{version}.tar.gz
-# Source0-md5:	aa3f0df13bece8709c94e694f417e22c
+Source0:	http://gps.sourceforge.net/release/%{name}-%{version}-FRC.tar.gz
+# Source0-md5:	49b0727c0188f75ec2790fef817fa107
 URL:		http://gps.sourceforge.net/
+Patch0:		%{name}-libnet1.patch
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	libnet-devel
+BuildRequires:	libnet1-devel
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,7 +32,8 @@ sposobów, aby zgromadziæ informacje w sposób niewidzialny i niemo¿liwy
 do wy¶ledzienia.
 
 %prep
-%setup 	-q
+%setup 	-q -n %{name}-%{version}-FRC
+%patch0 -p1
 
 %build
 %configure2_13
