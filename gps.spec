@@ -1,7 +1,7 @@
 Summary:	Ghost Port Scan
 Summary(pl):	Ghost Port Scan - ukrywaj±cy siê skaner portów
 Name:		gps
-Version:	0.7.0
+Version:	0.9.2
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
@@ -42,12 +42,10 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf ChangeLog NEWS README
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc ChangeLog NEWS README
 %attr(755,root,root) %{_bindir}/gps
