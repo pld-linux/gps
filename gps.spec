@@ -5,10 +5,6 @@ Version:	0.7.0
 Release:	1
 License:	GPL
 Group:		Networking/Utilities
-Group(de):	Netzwerkwesen/Werkzeuge
-Group(es):	Red/Utilitarios
-Group(pl):	Sieciowe/Narzêdzia
-Group(pt_BR):	Rede/Utilitários
 Source0:	http://gps.sourceforge.net/release/%{name}-%{version}.tar.gz
 URL:		http://gps.sourceforge.net/
 BuildRequires:  autoconf
