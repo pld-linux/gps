@@ -1,0 +1,110 @@
+--- gps-0.9.3-FRC/configure~	2002-04-26 10:47:04.000000000 +0000
++++ gps-0.9.3-FRC/configure	2003-07-03 21:34:55.000000000 +0000
+@@ -1183,14 +1183,14 @@
+ fi
+ 
+ 
+-echo $ac_n "checking for libnet_error in -lnet""... $ac_c" 1>&6
+-echo "configure:1188: checking for libnet_error in -lnet" >&5
++echo $ac_n "checking for libnet_error in -lnet1""... $ac_c" 1>&6
++echo "configure:1188: checking for libnet_error in -lnet1" >&5
+ ac_lib_var=`echo net'_'libnet_error | sed 'y%./+-%__p_%'`
+ if eval "test \"`echo '$''{'ac_cv_lib_$ac_lib_var'+set}'`\" = set"; then
+   echo $ac_n "(cached) $ac_c" 1>&6
+ else
+   ac_save_LIBS="$LIBS"
+-LIBS="-lnet  $LIBS"
++LIBS="-lnet1  $LIBS"
+ cat > conftest.$ac_ext <<EOF
+ #line 1196 "configure"
+ #include "confdefs.h"
+@@ -1224,7 +1224,7 @@
+ #define $ac_tr_lib 1
+ EOF
+ 
+-  LIBS="-lnet $LIBS"
++  LIBS="-lnet1 $LIBS"
+ 
+ else
+   echo "$ac_t""no" 1>&6
+diff -Nur gps-0.9.3-FRC.org/gps.c gps-0.9.3-FRC/gps.c
+--- gps-0.9.3-FRC.org/gps.c	2002-03-23 18:02:50.000000000 +0000
++++ gps-0.9.3-FRC/gps.c	2003-07-03 21:44:10.000000000 +0000
+@@ -23,7 +23,7 @@
+ #endif
+ #endif
+ // network librairies
+-#include<libnet.h>
++#include<libnet1.h>
+ #ifndef PCAP_SUBDIR
+ #include<pcap.h>
+ #else
+diff -Nur gps-0.9.3-FRC.org/gps.h gps-0.9.3-FRC/gps.h
+--- gps-0.9.3-FRC.org/gps.h	2002-03-23 18:03:25.000000000 +0000
++++ gps-0.9.3-FRC/gps.h	2003-07-03 21:44:48.000000000 +0000
+@@ -1,7 +1,7 @@
+ #ifndef GPS_H
+ #define GPS_H
+ 
+-#include<libnet.h>
++#include<libnet1.h>
+ #ifndef PCAP_SUBDIR
+ #include<pcap.h>
+ #else
+diff -Nur gps-0.9.3-FRC.org/mac-arp.c gps-0.9.3-FRC/mac-arp.c
+--- gps-0.9.3-FRC.org/mac-arp.c	2002-01-27 14:09:48.000000000 +0000
++++ gps-0.9.3-FRC/mac-arp.c	2003-07-03 21:44:10.000000000 +0000
+@@ -3,7 +3,7 @@
+ #include<time.h>
+ #include<sys/socket.h>
+ #include<errno.h>
+-#include<libnet.h>
++#include<libnet1.h>
+ #ifndef PCAP_SUBDIR
+ #include<pcap.h>
+ #else
+diff -Nur gps-0.9.3-FRC.org/route.c gps-0.9.3-FRC/route.c
+--- gps-0.9.3-FRC.org/route.c	2001-11-30 17:54:22.000000000 +0000
++++ gps-0.9.3-FRC/route.c	2003-07-03 21:44:10.000000000 +0000
+@@ -2,7 +2,7 @@
+ 
+ #include<sys/ioctl.h>
+ #include<sys/socket.h>
+-#include<libnet.h>
++#include<libnet1.h>
+ #include<stdio.h>
+ #include<errno.h>
+ #include<stdlib.h>
+diff -Nur gps-0.9.3-FRC.org/src-ip.c gps-0.9.3-FRC/src-ip.c
+--- gps-0.9.3-FRC.org/src-ip.c	2002-03-09 23:21:45.000000000 +0000
++++ gps-0.9.3-FRC/src-ip.c	2003-07-03 21:44:10.000000000 +0000
+@@ -1,7 +1,7 @@
+ #include<time.h>
+ #include<errno.h>
+ #include<stdlib.h>
+-#include<libnet.h>
++#include<libnet1.h>
+ #ifndef PCAP_SUBDIR
+ #include<pcap.h>
+ #else
+diff -Nur gps-0.9.3-FRC.org/timeout.c gps-0.9.3-FRC/timeout.c
+--- gps-0.9.3-FRC.org/timeout.c	2002-03-09 23:22:32.000000000 +0000
++++ gps-0.9.3-FRC/timeout.c	2003-07-03 21:44:10.000000000 +0000
+@@ -1,5 +1,5 @@
+ #include<errno.h>
+-#include<libnet.h>
++#include<libnet1.h>
+ #ifndef PCAP_SUBDIR
+ #include<pcap.h>
+ #else
+--- gps-0.9.3-FRC.org/Makefile.in	2002-04-26 10:47:02.000000000 +0000
++++ gps-0.9.3-FRC/Makefile.in	2003-07-03 21:49:58.000000000 +0000
+@@ -69,7 +69,7 @@
+ PACKAGE = @PACKAGE@
+ VERSION = @VERSION@
+ 
+-DEFS = @DEFS@ `libnet-config --defines` 
++DEFS = @DEFS@ `libnet1-config --defines` 
+ bin_PROGRAMS = gps
+ gps_SOURCES = gps.c gps.h services.c services.h mac-arp.c mac-arp.h timeout.c timeout.h fwrd.c fwrd.h route.c route.h src-ip.c src-ip.h rand.c rand.h pcap-int.h
+ ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
