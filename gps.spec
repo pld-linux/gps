@@ -29,7 +29,7 @@ testowania firewalli i wyci±gania informacji o zdalnych hostach. GPS
 jest skanerem portów i wykrywaczem regu³ek firewalla, u¿ywaj±cym
 fa³szowania IP (IP spoofing) i ARP (ARP poisoning) oraz innych
 sposobów, aby zgromadziæ informacje w sposób niewidzialny i niemo¿liwy
-do wy¶ledzienia.
+do wy¶ledzenia.
 
 %prep
 %setup 	-q -n %{name}-%{version}-FRC
