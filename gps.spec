@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Networking/Utilities
 Source0:	http://gps.sourceforge.net/release/%{name}-%{version}.tar.gz
+# Source0-md5:	aa3f0df13bece8709c94e694f417e22c
 URL:		http://gps.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
