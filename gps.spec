@@ -10,6 +10,8 @@ Group(pl):	Sieciowe/Narzêdzia
 Group(pt_BR):	Rede/Utilitários
 Source0:	http://gps.sourceforge.net/release/%{name}-%{version}.tar.gz
 URL:		http://gps.sourceforge.net
+BuildRequires:	libnet-devel
+BuildRequires:	libcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
