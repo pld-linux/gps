@@ -1,4 +1,5 @@
 Summary:	Ghost Port Scan
+Summary(pl):	Ghost Port Scan - ukrywaj±cy siê skaner portów
 Name:		gps
 Version:	0.7.0
 Release:	1
@@ -9,11 +10,11 @@ Group(es):	Red/Utilitarios
 Group(pl):	Sieciowe/Narzêdzia
 Group(pt_BR):	Rede/Utilitários
 Source0:	http://gps.sourceforge.net/release/%{name}-%{version}.tar.gz
-URL:		http://gps.sourceforge.net
-BuildRequires:	libnet-devel
-BuildRequires:	libpcap-devel
+URL:		http://gps.sourceforge.net/
 BuildRequires:  autoconf
 BuildRequires:  automake
+BuildRequires:	libnet-devel
+BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -22,6 +23,14 @@ allow them to easily test firewalls and get information from a remote host.
 GPS is a port scanner and a firewall rules disclosure (FWRD) tool, which uses
 IP spoofing, ARP poisoning and some other stratagems in order to perform a
 stealth and untrackable information collect.
+
+%description -l pl
+Ghost Port Scan to narzêdzie dla administratorów i testerów do ³atwego
+testowania firewalli i wyci±gania informacji o zdalnych hostach. GPS
+jest skanerem portów i wykrywaczem regu³ek firewalla, u¿ywaj±cym
+fa³szowania IP (IP spoofing) i ARP (ARP poisoning) oraz innych
+sposobów, aby zgromadziæ informacje w sposób niewidzialny i niemo¿liwy
+do wy¶ledzienia.
 
 %prep
 %setup 	-q
