@@ -7,18 +7,19 @@ License:	GPL
 Group:		Networking/Utilities
 Source0:	http://gps.sourceforge.net/release/%{name}-%{version}.tar.gz
 URL:		http://gps.sourceforge.net/
-BuildRequires:  autoconf
-BuildRequires:  automake
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	libnet-devel
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Ghost Port Scan is to provide administrators and pen-testers with a tool that
-allow them to easily test firewalls and get information from a remote host.
-GPS is a port scanner and a firewall rules disclosure (FWRD) tool, which uses
-IP spoofing, ARP poisoning and some other stratagems in order to perform a
-stealth and untrackable information collect.
+Ghost Port Scan is to provide administrators and pen-testers with a
+tool that allow them to easily test firewalls and get information from
+a remote host. GPS is a port scanner and a firewall rules disclosure
+(FWRD) tool, which uses IP spoofing, ARP poisoning and some other
+stratagems in order to perform a stealth and untrackable information
+collect.
 
 %description -l pl
 Ghost Port Scan to narzêdzie dla administratorów i testerów do ³atwego
