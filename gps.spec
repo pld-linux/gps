@@ -1,5 +1,5 @@
 Summary:	Ghost Port Scan
-Summary(pl):	Ghost Port Scan - ukrywaj±cy siê skaner portów
+Summary(pl.UTF-8):   Ghost Port Scan - ukrywajÄ…cy siÄ™ skaner portÃ³w
 Name:		gps
 Version:	0.9.3
 Release:	1
@@ -23,13 +23,13 @@ a remote host. GPS is a port scanner and a firewall rules disclosure
 stratagems in order to perform a stealth and untrackable information
 collect.
 
-%description -l pl
-Ghost Port Scan to narzêdzie dla administratorów i testerów do ³atwego
-testowania firewalli i wyci±gania informacji o zdalnych hostach. GPS
-jest skanerem portów i wykrywaczem regu³ek firewalla, u¿ywaj±cym
-fa³szowania IP (IP spoofing) i ARP (ARP poisoning) oraz innych
-sposobów, aby zgromadziæ informacje w sposób niewidzialny i niemo¿liwy
-do wy¶ledzenia.
+%description -l pl.UTF-8
+Ghost Port Scan to narzÄ™dzie dla administratorÃ³w i testerÃ³w do Å‚atwego
+testowania firewalli i wyciÄ…gania informacji o zdalnych hostach. GPS
+jest skanerem portÃ³w i wykrywaczem reguÅ‚ek firewalla, uÅ¼ywajÄ…cym
+faÅ‚szowania IP (IP spoofing) i ARP (ARP poisoning) oraz innych
+sposobÃ³w, aby zgromadziÄ‡ informacje w sposÃ³b niewidzialny i niemoÅ¼liwy
+do wyÅ›ledzenia.
 
 %prep
 %setup 	-q -n %{name}-%{version}-FRC
