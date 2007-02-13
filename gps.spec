@@ -1,5 +1,5 @@
 Summary:	Ghost Port Scan
-Summary(pl.UTF-8):   Ghost Port Scan - ukrywający się skaner portów
+Summary(pl.UTF-8):	Ghost Port Scan - ukrywający się skaner portów
 Name:		gps
 Version:	0.9.3
 Release:	1
