@@ -33,7 +33,7 @@ do wyśledzenia.
 
 %prep
 %setup 	-q -n %{name}-%{version}-FRC
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %configure2_13
